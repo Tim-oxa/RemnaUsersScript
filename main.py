@@ -6,6 +6,8 @@ panel_url = input("Введите url панели: ")
 token = input("Введите токен авторизации: ")
 count_days = int(input("Введите количество дней, которые нужно прибавить: "))
 
+print("Обновление началось...")
+
 
 endpoint = panel_url + "/api"
 
