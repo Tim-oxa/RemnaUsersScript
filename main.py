@@ -36,7 +36,7 @@ for x in range(0, total_users, 1000):
     for user in users:
         expire_at = dt.datetime.fromisoformat(user["expireAt"])
         if expire_at.year != 2099:
-            new_expire_at = expire_at + dt.timedelta(days=3)
+            new_expire_at = expire_at + dt.timedelta(days=count_days)
             remna.patch(endpoint+"/users/", json={
                 "uuid": user["uuid"],
                 "expireAt": new_expire_at.isoformat()
